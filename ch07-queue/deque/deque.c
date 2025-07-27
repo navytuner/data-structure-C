@@ -20,6 +20,13 @@ void dq_push_front(struct deq *dq, int data){
         dq->front->prev = newnode;
         dq->front = newnode;
     }
+
+    // if use dummy, there is no need to check isempty
+    // struct node *tmp = dq->front->next;
+    // tmp->prev = newnode;
+    // dp->front->next = newnode;
+    // newnode->prev = dq->front;
+    // newnode->next = tmp;
 }
 
 void dq_push_back(struct deq *dq, int data){
